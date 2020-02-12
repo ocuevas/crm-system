@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body bg-light mt-5">
+          <h2>Create Account</h2>
+          <p>Fill in this form to register</p>
+          <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+            <div class="form-group">
+              <label for="name">First Name</label>
+              <input type="text" name="firstName" [(ngModel)]="firstName" class="form-control form-control-lg " value="">
+              <span class="invalid-feedback"></span>
+            </div>
+            <div class="form-group">
+              <label for="name">Last Name</label>
+              <input type="text" name="lastName"  [(ngModel)]="lastName" class="form-control form-control-lg " value="">
+              <span class="invalid-feedback"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" [(ngModel)]="email" class="form-control form-control-lg " value="">
+              <span class="invalid-feedback"></span>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" name="password" [(ngModel)]="password" class="form-control form-control-lg " value="">
+              <span class="invalid-feedback"></span>
+            </div>
+            <div class="form-row">
+              <div class="col">
+                <input type="submit" value="Register" class="btn btn-success btn-block">
+              </div>
+              <div class="col">
+                <a routerLink="/login" class="btn btn-light btn-block">Have an account? Login</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
